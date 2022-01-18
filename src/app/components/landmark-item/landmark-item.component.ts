@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Landmark } from 'src/app/Landmark';
+import { Landmark } from '../../Landmark';
 
 @Component({
   selector: 'app-landmark-item',
