@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Landmark } from 'src/app/Landmark';
+import { LandmarkService } from 'src/app/services/landmark.service';
 
 @Component({
   selector: 'app-landmarks',
@@ -8,9 +9,10 @@ import { Landmark } from 'src/app/Landmark';
 })
 export class LandmarksComponent implements OnInit {
   
-  constructor() { }
+  constructor(private landmarkService: LandmarkService) { }
 
   ngOnInit(): void {
+    this.landmarkService.getLandmarks()
   }
 
 }
