@@ -12,7 +12,7 @@ export class LandmarksComponent implements OnInit {
   constructor(private landmarkService: LandmarkService) { }
 
   ngOnInit(): void {
-    this.landmarkService.getLandmarks()
+    this.landmarkService.getLandmarks().subscribe(L => console.log(L))
   }
 
 }
