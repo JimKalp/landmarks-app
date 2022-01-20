@@ -13,7 +13,6 @@ export class LandmarkService {
   constructor(private http:HttpClient) { }
 
   getLandmarks(): Observable<Landmark[]> {
-    console.log("********")
-    return this.http.get<Landmark[]>(this.apiUrl).pipe(tap(_ => console.log('fetched heroes')))
+    return this.http.get<Landmark[]>(this.apiUrl).pipe(tap(_ => console.log('fetched landmarks')))
   }
 }
