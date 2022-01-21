@@ -1,1 +1,11 @@
-<app-landmark-item>landmarks works</app-landmark-item>
+<!-- <ul class="landmarks">
+    <li *ngFor="let landmark of landmarks">
+        {{landmark.title}} ===== {{landmark.short_info}}
+    </li>
+</ul> -->
+
+<div class="landmarks" *ngFor="let landmark of landmarks">
+    <div class="landmarks_thumbnail">{{landmark.order}}</div>
+    <a class="landmarks_title" href="{{landmark.url}}">{{landmark.title}}</a>
+    <div class="landmarks_shortInfo">{{landmark.short_info}}</div>
+</div>

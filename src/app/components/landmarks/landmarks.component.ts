@@ -7,13 +7,15 @@ import { LandmarkService } from 'src/app/services/landmark.service';
   templateUrl: './landmarks.component.html',
   styleUrls: ['./landmarks.component.css']
 })
+ 
 export class LandmarksComponent implements OnInit {
-  
+  landmarks: Landmark[] = [];
   constructor(private landmarkService: LandmarkService) { }
-
+  
   ngOnInit(): void {
-    this.landmarkService.getLandmarks().subscribe((landmarks: Landmark[]) => console.log('res', landmarks))
+    this.landmarkService.getLandmarks().subscribe(landmarks => 
+    {this.landmarks = landmarks; console.log('res', landmarks)})
     
   }
-
+  
 }
