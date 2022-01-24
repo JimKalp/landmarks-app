@@ -23,11 +23,11 @@ export class LandmarkService {
       tap(_ => console.log('fetched landmarks')))
   }
 
-  getLandmarkById(Objectid: String): Observable<Landmark> {
-    const url = `${this.apiUrl}/${Objectid}`;
+  getLandmarkById(objectid: String): Observable<Landmark> {
+    const url = `${this.apiUrl}/${objectid}`;
 
     return this.http.get<Landmark>(url).pipe(
-      tap(_ => console.log(`fetched landmark id=${Objectid}`)),
+      tap(_ => console.log(`fetched landmark id=${objectid}`)),
     );
   }
 }
