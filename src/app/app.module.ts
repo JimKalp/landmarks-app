@@ -9,6 +9,7 @@ import { LandmarksComponent } from './components/landmarks/landmarks.component';
 import { LandmarkItemComponent } from './components/landmark-item/landmark-item.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandmarkFullpageComponent } from './components/landmark-fullpage/landmark-fullpage.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { LandmarkFullpageComponent } from './components/landmark-fullpage/landma
     ButtonComponent,
     LandmarksComponent,
     LandmarkItemComponent,
-    LandmarkFullpageComponent
+    LandmarkFullpageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

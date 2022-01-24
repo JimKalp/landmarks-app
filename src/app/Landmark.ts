@@ -1,11 +1,17 @@
 export interface Landmark {
     objectId: String;
-    photo_thumb: File;
+    photo_thumb: Photofile;
     order: Number;
     url: String;
     short_info: String;
-    photo: File;
+    photo: Photofile;
     location: Number[];
     title: String;
     description: String;
+}
+
+class Photofile {
+    name: String;
+    url: String;
+    __type: String;
 }

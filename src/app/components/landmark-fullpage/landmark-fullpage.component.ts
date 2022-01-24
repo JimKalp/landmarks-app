@@ -24,4 +24,15 @@ export class LandmarkFullpageComponent implements OnInit {
     
   }
 
+  getLandmarkById(): void {
+    const objectId = this.route.snapshot.paramMap.get('objectId');
+    if (objectId!=null){
+    this.landmarkService.getLandmarkById(objectId)
+      .subscribe(landmark => this.landmark = landmark);
+    }
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 }
