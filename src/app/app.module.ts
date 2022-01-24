@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { LandmarksComponent } from './components/landmarks/landmarks.component';
 import { LandmarkItemComponent } from './components/landmark-item/landmark-item.component';
+import { AppRoutingModule } from './app-routing.module';
+import { LandmarkFullpageComponent } from './components/landmark-fullpage/landmark-fullpage.component';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { LandmarkItemComponent } from './components/landmark-item/landmark-item.
     HeaderComponent,
     ButtonComponent,
     LandmarksComponent,
-    LandmarkItemComponent
+    LandmarkItemComponent,
+    LandmarkFullpageComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
