@@ -21,7 +21,7 @@ export class LandmarkFullpageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+    this.getLandmarkById();
   }
 
   getLandmarkById(): void {

@@ -5,8 +5,11 @@
 </ul> -->
 
 <div class="landmarks" *ngFor="let landmark of landmarks">
-    <div class="landmarks_thumbnail">{{landmark.order}}</div>
-    <img src="{{landmark.photo_thumb.url}}" width="100" height="100">
+    <div class="landmarks_thumbnail">
+        <img src="{{landmark.photo_thumb.url}}" width="100" height="100">
+    </div>
     <a class="landmarks_title" href="{{landmark.url}}">{{landmark.title}}</a>
-    <div class="landmarks_shortInfo">{{landmark.short_info}}</div>
+    <div class="landmarks_shortInfo">
+        <a routerLink="/fulldetails/{{landmark.objectId}}">{{landmark.short_info}}</a>
+    </div>
 </div>
