@@ -6,7 +6,7 @@ import { LandmarkFullpageComponent } from './components/landmark-fullpage/landma
 const routes: Routes = [
   { path: '', redirectTo: '/landmarks', pathMatch: 'full'},
   { path: 'landmarks', component: LandmarksComponent },
-  { path: 'fulldetails/:objectId', component: LandmarkFullpageComponent }
+  { path: 'landmarks/:objectId', component: LandmarkFullpageComponent }
 ];
 
 @NgModule({

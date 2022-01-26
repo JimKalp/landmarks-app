@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Landmark } from '../../Landmark';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
+import { Landmark } from '../../Landmark';
 import { LandmarkService } from 'src/app/services/landmark.service';
 
 @Component({
@@ -28,7 +28,7 @@ export class LandmarkFullpageComponent implements OnInit {
     const objectId = this.route.snapshot.paramMap.get('objectId');
     if (objectId!=null){
     this.landmarkService.getLandmarkById(objectId)
-      .subscribe(landmark => this.landmark = landmark);
+      .subscribe(landmark => {this.landmark = landmark; console.log('res', landmark)});
     }
   }
 
