@@ -3,13 +3,31 @@
         {{landmark.title}} ===== {{landmark.short_info}}
     </li>
 </ul> -->
-
-<div class="landmarks" *ngFor="let landmark of landmarks">
-    <div class="landmarks_thumbnail">
+<!--<div class="landmarks_thumbnail">
         <img src="{{landmark.photo_thumb.url}}" width="100" height="100">
     </div>
     <a class="landmarks_title" href="{{landmark.url}}">{{landmark.title}}</a>
     <div class="landmarks_shortInfo">
         <a routerLink="/landmarks/{{landmark.objectId}}">{{landmark.short_info}}</a>
-    </div>
+    </div>-->
+
+<div class="landmarks" *ngFor="let landmark of landmarks">
+    <div class="card">
+        <div class="row no-gutters">
+            <div class="col-auto">
+                <img src="{{landmark.photo_thumb.url}}"  width="200" height="200" alt="">
+            </div>
+            <div class="col">
+                <div class="card-block px-2">
+                    <h4><a class="landmarks_title" href="{{landmark.url}}">{{landmark.title}}</a></h4>
+                    <p class="card-text">
+                        {{landmark.short_info}}
+                    </p>
+                    <a routerLink="/landmarks/{{landmark.objectId}}" class="btn btn-primary">View Full Page</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer w-100 text-muted">
+        </div>
+  </div>
 </div>

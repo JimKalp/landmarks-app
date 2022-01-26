@@ -13,9 +13,9 @@
             </button>
             <div id="mob-navbar">
                 <form class="d-flex">
-                    <input class="form-control me-2" type="text" placeholder="Username" />
-                    <input class="form-control me-2" type="password" placeholder="Password" />
-                    <button class="btn btn-success" type="submit">Login</button>
+                    <input [formControl]="username" class="form-control me-2" type="text" placeholder="Username" />
+                    <input [formControl]="password" class="form-control me-2" type="password" placeholder="Password" />
+                    <button class="btn btn-success" (click)="login()">Login</button>
                 </form>
             </div>
         </div>

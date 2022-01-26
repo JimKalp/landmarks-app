@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/User';
+import { LoginService } from 'src/app/services/login.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  user: User;
+  username = new FormControl('');
+  password = new FormControl('');
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
 
+  login() {
+    this.loginService.loginUser({username: this.username.value, password: this.password.value})
+      .subscribe(res => localStorage.setItem('sessionToken', res.sessionToken));
+  }
 }
