@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Landmark } from 'src/app/Landmark';
 import { LandmarkService } from 'src/app/services/landmark.service';
 
@@ -10,12 +11,14 @@ import { LandmarkService } from 'src/app/services/landmark.service';
  
 export class LandmarksComponent implements OnInit {
   landmarks: Landmark[] = [];
+  token: string | null;
+
   constructor(private landmarkService: LandmarkService) { }
   
   ngOnInit(): void {
     this.landmarkService.getLandmarks().subscribe(landmarks => 
     {this.landmarks = landmarks; console.log('res', landmarks)})
-    
+    this.token = localStorage.getItem('sessionToken');
   }
   
 }

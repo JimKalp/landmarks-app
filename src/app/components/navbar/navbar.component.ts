@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
 import { User } from 'src/app/User';
 import { LoginService } from 'src/app/services/login.service';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',

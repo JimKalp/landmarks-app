@@ -23,7 +23,12 @@
                     <p class="card-text">
                         {{landmark.short_info}}
                     </p>
-                    <a routerLink="/landmarks/{{landmark.objectId}}" class="btn btn-primary">View Full Page</a>
+                    <div>
+                        <a routerLink="/landmarks/{{landmark.objectId}}" class="btn btn-primary">View Full Page</a>
+                        <ng-template [ngIf]="token">
+                            <a routerLink="/dashboard/{{landmark.objectId}}" class="btn btn-warning">Edit</a>
+                        </ng-template>
+                    </div>
                 </div>
             </div>
         </div>
