@@ -1,7 +1,6 @@
 export interface Landmark {
     objectId: String;
     photo_thumb: Photofile;
-    order: Number;
     url: String;
     short_info: String;
     photo: Photofile;

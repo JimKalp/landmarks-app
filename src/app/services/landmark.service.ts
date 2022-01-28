@@ -39,11 +39,11 @@ export class LandmarkService {
       return "";
   }
 
-  updateLandmark(landmark: Landmark): Observable<any> {
+  updateLandmark(landmark: any, objectId: String): Observable<any> {
     console.log("##########")
-    const url = `${this.apiUrl}/${landmark.objectId}`;
+    const url = `${this.apiUrl}/${objectId}`;
     return this.http.put(url, landmark, this.httpOptions).pipe(
-      tap(_ => console.log(`updated landmark id=${landmark.objectId}`))
+      tap(_ => console.log(`updated landmark id=${landmark.title}`))
     );
   }
 }

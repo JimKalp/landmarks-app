@@ -15,19 +15,19 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Title</label>
                     <div class="col-lg-8">
-                        <input class="form-control" [(ngModel)]="landmark.title" type="text" value="{{landmark.title}}">
+                        <input class="form-control" [(ngModel)]="landmark.title" [ngModelOptions]="{standalone: true}" type="text" value="{{landmark.title}}">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Short info</label>
                     <div class="col-lg-8">
-                        <input class="form-control" [(ngModel)]="landmark.short_info" type="text" value="{{landmark.short_info}}">
+                        <input class="form-control" [(ngModel)]="landmark.short_info" [ngModelOptions]="{standalone: true}" type="text" value="{{landmark.short_info}}">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Description</label>
                     <div class="col-lg-8">
-                        <input class="form-control" [(ngModel)]="landmark.description" type="text" value="{{landmark.description}}">
+                        <input class="form-control" [(ngModel)]="landmark.description" [ngModelOptions]="{standalone: true}" type="text" value="{{landmark.description}}">
                     </div>
                 </div>
                 

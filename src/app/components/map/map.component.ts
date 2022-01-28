@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Loader } from "@googlemaps/js-api-loader";
 import { LandmarkService } from 'src/app/services/landmark.service';
 import { Landmark } from 'src/app/Landmark';
@@ -11,24 +11,30 @@ import { LandmarksComponent } from '../landmarks/landmarks.component';
 })
 export class MapComponent implements OnInit {
   landmark: Landmark | undefined;
+  @Input() location: any;
 
   constructor(private landmarkService: LandmarkService) { }
 
   ngOnInit(): void {
     //this.initMap();
-
+    
     const loader = new Loader({
       apiKey: "AIzaSyDaamDZGsY6ljXmzzzQfYhkQDcKx6cYny0",
       version: "weekly",
     });
     
     loader.load().then(() => {
-      new google.maps.Map(document.getElementById("map") as HTMLElement, {
-        center: { lat: -34.397, lng: 150.644 },
+      const map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
+        center: { lat: this.location.lat, lng: this.location.lng },
         zoom: 8,
       });
+      new google.maps.Marker({
+        position: this.location,
+        map,
+        title: "Hello World!",
+      });
     });
-
+    
   }
 
   // Initialize and add the map

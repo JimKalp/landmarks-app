@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit {
 
   save(): void {
     if (this.landmark) {
-      this.landmarkService.updateLandmark(this.landmark)
+      this.landmarkService.updateLandmark({title: this.landmark.title, short_info: this.landmark.short_info, description: this.landmark.description}, this.landmark.objectId)
         .subscribe(() => this.goBack());
     }
   }

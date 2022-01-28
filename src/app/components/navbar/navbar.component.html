@@ -11,12 +11,15 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mob-navbar" aria-label="Toggle">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="mob-navbar">
+            <div *ngIf="!token" id="mob-navbar">
                 <form class="d-flex">
                     <input [formControl]="username" class="form-control me-2" type="text" placeholder="Username" />
                     <input [formControl]="password" class="form-control me-2" type="password" placeholder="Password" />
                     <button class="btn btn-success" (click)="login()">Login</button>
                 </form>
+            </div>
+            <div *ngIf="token">
+                <button class="btn btn-danger" (click)="logout()">Logout</button>
             </div>
         </div>
     </nav>
