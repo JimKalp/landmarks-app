@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Landmark } from '../../Landmark';
 import { LandmarkService } from 'src/app/services/landmark.service';
+import { MapComponent } from '../map/map.component';
 
 @Component({
   selector: 'app-landmark-fullpage',

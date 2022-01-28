@@ -1,47 +1,42 @@
 <div *ngIf="landmark">
-    <div class="container bootstrap snippets bootdey">
-        <h1 class="text-primary">Edit Dashboard</h1>
-        <hr>
-        <div class="row">
-        <!-- left column -->
-        <div class="col-md-3">
-            
-        </div>
-        
-        <!-- edit form column -->
-        <div class="col-md-9 personal-info">
-            <h3>Landmark info</h3>
-            <form class="form-horizontal" role="form">
-            <div class="form-group">
-                <label class="col-lg-3 control-label">Short info</label>
-                <div class="col-lg-8">
-                <input class="form-control" type="text" value="{{landmark.short_info}}">
-                </div>
+    <div *ngIf="token">
+        <div class="container bootstrap snippets bootdey">
+            <h1 class="text-primary">Edit Dashboard</h1>
+            <hr>
+            <div class="row">
+            <!-- left column -->
+            <div class="col-md-3">
+                
             </div>
-            <div class="form-group">
-                <label class="col-lg-3 control-label">Description</label>
-                <div class="col-lg-8">
-                <input class="form-control" type="text" value="{{landmark.description}}">
+            <!-- edit form column -->
+            <div class="col-md-9 personal-info">
+                <h3>Landmark info</h3>
+                <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Title</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" [(ngModel)]="landmark.title" type="text" value="{{landmark.title}}">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-3 control-label">Title</label>
-                <div class="col-lg-8">
-                <input class="form-control" type="text" value="{{landmark.title}}">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Short info</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" [(ngModel)]="landmark.short_info" type="text" value="{{landmark.short_info}}">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-3 control-label"></label>
-                <div class="col-lg-8">
-                <input class="form-control" type="text" value="">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Description</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" [(ngModel)]="landmark.description" type="text" value="{{landmark.description}}">
+                    </div>
                 </div>
+                
+                <button (click)="save()">Save</button>
+                <button (click)="goBack()">go back</button>
+                </form>
             </div>
-            <button (click)="save()">save</button>
-            </form>
-            
         </div>
     </div>
-        
     </div>
     <hr>
 </div>

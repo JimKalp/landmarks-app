@@ -13,6 +13,7 @@ import { LandmarkFullpageComponent } from './components/landmark-fullpage/landma
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MapComponent } from './components/map/map.component';
+import * as GoogleMapsLoader from 'google-maps';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { MapComponent } from './components/map/map.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
