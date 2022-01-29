@@ -11,28 +11,31 @@
         <a routerLink="/landmarks/{{landmark.objectId}}">{{landmark.short_info}}</a>
     </div>-->
 <img src="https://covidtraveladvice.kuoni.co.uk/sites/default/files/styles/destination_hero/public/2021-01/dubai_362563_FullWidthDesktop.jpg?itok=uCvR04js" class="img-fluid" alt="Responsive image">
-<div class="landmarks" *ngFor="let landmark of landmarks">
-    <div class="card">
-        <div class="row no-gutters">
-            <div class="col-auto">
-                <img src="{{landmark.photo_thumb.url}}" width="150" height="180" alt="">
-            </div>
-            <div class="col">
-                <div class="card-block px-2">
-                    <h4><a class="landmarks_title" href="{{landmark.url}}">{{landmark.title}}</a></h4>
-                    <p class="card-text">
-                        {{landmark.short_info}}
-                    </p>
-                    <div>
-                        <a routerLink="/landmarks/{{landmark.objectId}}" class="btn btn-primary">View Full Page</a>
-                        <ng-template [ngIf]="token">
-                            <a routerLink="/dashboard/{{landmark.objectId}}" class="btn btn-warning">Edit</a>
-                        </ng-template>
+<div class="container">
+    <app-header></app-header>
+    <div class="landmarks" *ngFor="let landmark of landmarks">
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-auto">
+                    <img src="{{landmark.photo_thumb.url}}" width="150" height="180" alt="">
+                </div>
+                <div class="col">
+                    <div class="card-block px-2">
+                        <h4><a class="landmarks_title" href="{{landmark.url}}">{{landmark.title}}</a></h4>
+                        <p class="card-text">
+                            {{landmark.short_info}}
+                        </p>
+                        <div>
+                            <a routerLink="/landmarks/{{landmark.objectId}}" class="btn btn-primary">View Full Page</a>
+                            <ng-template [ngIf]="token">
+                                <a routerLink="/dashboard/{{landmark.objectId}}" class="btn btn-warning">Edit</a>
+                            </ng-template>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card-footer w-100 text-muted">
-        </div>
-  </div>
+            <div class="card-footer w-100 text-muted">
+            </div>
+    </div>
+    </div>
 </div>

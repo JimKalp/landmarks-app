@@ -1,6 +1,32 @@
 <div *ngIf="landmark">
-    <h2>{{landmark.title}}</h2>
+    <div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+        <h1>{{landmark.title}}</h1>
+        <a href="{{landmark.url}}">Official Website</a>
+    </div>
     <br>
+    <!--<div>
+        <img src="{{landmark.photo.url}}" alt="">
+    </div>
     <p class="lead">{{landmark.description}}</p>
-    <app-map [location]="{lat: landmark.location[1], lng: landmark.location[0]}"></app-map>
+    <app-map [location]="{lat: landmark.location[1], lng: landmark.location[0]}"></app-map>-->
+
+    <div class="left">
+        <img src="{{landmark.photo_thumb.url}}" alt="">
+    </div>
+    <div class="main">
+        <h2>Description</h2>
+        <p class="lead">{{landmark.description}}</p>
+    </div>
+    
+    <div class="right">
+        <h2>About</h2>
+        <p>{{landmark.short_info}}</p>
+    </div>
+    <br>
+    <div>
+        <app-map [location]="{lat: landmark.location[1], lng: landmark.location[0]}"></app-map>
+    </div>
+    <br>
+    <div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;"></div>
+    
 </div>
