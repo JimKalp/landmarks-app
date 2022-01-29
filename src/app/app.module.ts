@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgImageFullscreenViewModule } from 'ng-image-fullscreen-view';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -33,6 +34,7 @@ import * as GoogleMapsLoader from 'google-maps';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgImageFullscreenViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

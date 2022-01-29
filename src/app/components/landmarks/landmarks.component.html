@@ -10,31 +10,12 @@
     <div class="landmarks_shortInfo">
         <a routerLink="/landmarks/{{landmark.objectId}}">{{landmark.short_info}}</a>
     </div>-->
-
+<img src="https://covidtraveladvice.kuoni.co.uk/sites/default/files/styles/destination_hero/public/2021-01/dubai_362563_FullWidthDesktop.jpg?itok=uCvR04js" class="img-fluid" alt="Responsive image">
 <div class="landmarks" *ngFor="let landmark of landmarks">
     <div class="card">
         <div class="row no-gutters">
             <div class="col-auto">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="{{landmark.photo_thumb.url}}"  width="200" height="200" alt="">
-                </button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ...<img src="{{landmark.photo.url}}">
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <img src="{{landmark.photo_thumb.url}}" width="150" height="180" alt="">
             </div>
             <div class="col">
                 <div class="card-block px-2">

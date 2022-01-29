@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NgImageFullscreenViewModule } from 'ng-image-fullscreen-view';
 import { Landmark } from 'src/app/Landmark';
 import { LandmarkService } from 'src/app/services/landmark.service';
 
@@ -12,6 +12,10 @@ import { LandmarkService } from 'src/app/services/landmark.service';
 export class LandmarksComponent implements OnInit {
   landmarks: Landmark[] = [];
   token: string | null;
+
+  currentIndex: any = -1;
+  selectedImageIndex: number = -1;
+  showFlag: any = false;
 
   constructor(private landmarkService: LandmarkService) { }
   

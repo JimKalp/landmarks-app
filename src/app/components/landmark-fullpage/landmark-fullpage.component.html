@@ -1,6 +1,6 @@
 <div *ngIf="landmark">
     <h2>{{landmark.title}}</h2>
     <br>
-    <p>{{landmark.description}}</p>
+    <p class="lead">{{landmark.description}}</p>
     <app-map [location]="{lat: landmark.location[1], lng: landmark.location[0]}"></app-map>
 </div>

@@ -30,7 +30,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logout(){
-    this.loginService.logoutUser().subscribe(res => localStorage.removeItem('sessionToken'))
-    this.router.navigate(['/landmarks'])
+    this.loginService.logoutUser().subscribe(res => localStorage.removeItem('sessionToken'));
+    this.router.navigate(['/landmarks']);
   }
 }
