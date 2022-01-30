@@ -12,7 +12,7 @@ Node version: 14.15.1
 
 First: git clone https://github.com/JimKalp/landmarks-app.git
 
-Then cd landmarks-app
+Then: cd landmarks-app
 
 ## 3. Modules and files install
 
