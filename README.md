@@ -11,6 +11,7 @@ Node version: 14.15.1
 ## 3. Pulling project 
 
 First: git clone https://github.com/JimKalp/landmarks-app.git
+
 Then cd landmarks-app
 
 ## 3. Modules and files install
