@@ -40,7 +40,7 @@ export class LandmarkService {
   }
 
   updateLandmark(landmark: any, objectId: String): Observable<any> {
-    console.log("##########")
+    //console.log("##########") Used for debugging
     const url = `${this.apiUrl}/${objectId}`;
     return this.http.put(url, landmark, this.httpOptions).pipe(
       tap(_ => console.log(`updated landmark id=${landmark.title}`))

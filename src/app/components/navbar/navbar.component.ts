@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 
 import { User } from 'src/app/User';
 import { LoginService } from 'src/app/services/login.service';
-import { CurrentuserService } from 'src/app/services/currentuser.service';
 
 @Component({
   selector: 'app-navbar',
@@ -20,8 +19,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
-    private router: Router,
-    private currentUserService: CurrentuserService) { 
+    private router: Router) { 
     }
 
   ngOnInit(): void {
@@ -32,7 +30,7 @@ export class NavbarComponent implements OnInit {
     this.loginService.loginUser({username: this.username.value, password: this.password.value})
       .subscribe(res => { localStorage.setItem('sessionToken', res.sessionToken);
       window.location.reload();});
-      //this.router.navigate(['/landmarks']);
+      
   }
 
   logout(){
