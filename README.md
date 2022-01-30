@@ -8,9 +8,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Node version: 14.15.1
 
-## 3. Git 
+## 3. Pulling project 
 
-Git clone landmarks-app
+Git clone landmarks-app and cd landmarks-app
 
 ## 3. Modules and files install
 
