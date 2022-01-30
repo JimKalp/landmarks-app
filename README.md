@@ -1,21 +1,21 @@
 # Install Steps and Versions
 
-## Angular
+## 1.Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
-## Node
+## 2.Node
 
-node version: 14.15.1
+Node version: 14.15.1
 
-## Git 
+## 3.Git 
 
 Git clone landmarks-app
 
-## Modules
+## 3.Modules and files install
 
 npm install
 
-## Build
+## 4.Build
 
 ng serve
