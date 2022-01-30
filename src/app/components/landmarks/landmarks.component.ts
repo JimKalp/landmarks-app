@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgImageFullscreenViewModule } from 'ng-image-fullscreen-view';
 import { Landmark } from 'src/app/Landmark';
 import { LandmarkService } from 'src/app/services/landmark.service';
+import { CurrentuserService } from 'src/app/services/currentuser.service';
 
 @Component({
   selector: 'app-landmarks',

@@ -34,7 +34,7 @@ import * as GoogleMapsLoader from 'google-maps';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgImageFullscreenViewModule
+    NgImageFullscreenViewModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
