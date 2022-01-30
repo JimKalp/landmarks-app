@@ -54,6 +54,15 @@ button {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
+button:hover {
+  background-color: black;
+  color: white;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
 
 .form-control {
   margin: 20px 0;
