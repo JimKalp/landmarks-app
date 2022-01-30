@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Landmark } from '../../Landmark';
 import { LandmarkService } from 'src/app/services/landmark.service';
-import { MapComponent } from '../map/map.component';
+
 
 @Component({
   selector: 'app-landmark-fullpage',
@@ -12,7 +12,7 @@ import { MapComponent } from '../map/map.component';
   styleUrls: ['./landmark-fullpage.component.css']
 })
 export class LandmarkFullpageComponent implements OnInit {
-  //@Input() landmark?: Landmark;
+  
   landmark: Landmark | undefined;
 
   constructor(
