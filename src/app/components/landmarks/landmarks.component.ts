@@ -12,7 +12,6 @@ export class LandmarksComponent implements OnInit {
   landmarks: Landmark[] = [];
   token: string | null;
 
-  showFlag: any = false;
   currentlandmark: Landmark;
 
   constructor(private landmarkService: LandmarkService) { }
@@ -31,6 +30,5 @@ export class LandmarksComponent implements OnInit {
   closeModal() {
     document.getElementById('modal')!.style.display = "none";
   }
-
 
 }
