@@ -11,10 +11,27 @@
         <a routerLink="/landmarks/{{landmark.objectId}}">{{landmark.short_info}}</a>
     </div>-->
 <img src="https://covidtraveladvice.kuoni.co.uk/sites/default/files/styles/destination_hero/public/2021-01/dubai_362563_FullWidthDesktop.jpg?itok=uCvR04js" class="img-fluid" alt="Responsive image">
-<div class="container">
-    <app-header></app-header>
-    <div class="landmarks" *ngFor="let landmark of landmarks">
-        <div class="card">
+
+    
+    <div class="container">
+        <app-header></app-header>
+        <div class="landmarks list-group shadow" *ngFor="let landmark of landmarks">
+            <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                <img src="{{landmark.photo_thumb.url}}" width="150" height="150" class="rounded float-start">
+                <div class="media-body order-2 order-lg-1">
+                    <h5 class="mt-0 font-weight-bold mb-2"><a class="landmarks_title" href="{{landmark.url}}">{{landmark.title}}</a></h5>
+                    <p class="font-italic text-muted mb-0 small">{{landmark.short_info}}</p>
+                    <div class="d-flex align-items-center justify-content-between mt-1">
+                        <a routerLink="/landmarks/{{landmark.objectId}}" class="btn btn-primary">View Full Page</a>
+                            <ng-template [ngIf]="token">
+                                <a routerLink="/dashboard/{{landmark.objectId}}" class="btn btn-warning">Edit</a>
+                            </ng-template>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+        <!--<div class="card">
             <div class="row no-gutters">
                 <div class="col-auto">
                     <img src="{{landmark.photo_thumb.url}}" width="150" height="180" alt="">
@@ -36,6 +53,4 @@
             </div>
             <div class="card-footer w-100 text-muted">
             </div>
-    </div>
-    </div>
-</div>
+    </div>-->
