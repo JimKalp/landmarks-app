@@ -17,7 +17,11 @@
         <app-header></app-header>
         <div class="landmarks list-group shadow" *ngFor="let landmark of landmarks">
             <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-                <img src="{{landmark.photo_thumb.url}}" width="150" height="150" class="rounded float-start">
+
+                <button (click)="openModal(landmark)" class="" data-toggle="modal" data-target="#modal">
+                    <img id="myImg" src="{{landmark.photo_thumb.url}}" width="150" height="150" class="rounded float-start"></button>
+                
+                
                 <div class="media-body order-2 order-lg-1">
                     <h5 class="mt-0 font-weight-bold mb-2"><a class="landmarks_title" href="{{landmark.url}}">{{landmark.title}}</a></h5>
                     <p class="font-italic text-muted mb-0 small">{{landmark.short_info}}</p>
@@ -29,9 +33,34 @@
                     </div>
                 </div>   
             </div>
+
+                <!----modal starts here--->
+                <div id="modal" class="modal fade" role='dialog'>
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button (click)="closeModal()" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title"></h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{this.currentlandmark.photo.url}}" style="width:100%;height:100%;">       
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Modal ends here--->
+
+
         </div>
     </div>
+    
+          
+    
         <!--<div class="card">
+            <img id="myImg" src="{{landmark.photo_thumb.url}}" width="150" height="150" class="rounded float-start">
             <div class="row no-gutters">
                 <div class="col-auto">
                     <img src="{{landmark.photo_thumb.url}}" width="150" height="180" alt="">

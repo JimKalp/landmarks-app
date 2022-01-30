@@ -23,6 +23,7 @@
     "@types/google-maps": "^3.2.3",
     "bootstrap": "^5.1.3",
     "ng-image-fullscreen-view": "^2.0.0",
+    "ng-image-slider": "^2.8.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
