@@ -2,7 +2,7 @@
 
 ## 1. Angular Version
 
-version 13.1.2.
+version 13.1.2.  (Angular CLI)
 
 ## 2. Node
 
